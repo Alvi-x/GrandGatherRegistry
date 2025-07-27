@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+/* slick-carousel default styles */
+.slick-slide {
+  display: flex !important;
+}
+.slick-list {
+  overflow: hidden;
+}
