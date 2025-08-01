@@ -70,13 +70,13 @@ const VendorsPage = () => {
 
         <div className="mt-12 space-x-4">
           <Link
-            to="/register/vendor"
+            to="/VendorRegister"
             className="inline-block bg-black text-white py-3 px-6 rounded-xl text-lg font-medium hover:bg-gray-800 transition"
           >
             Register as a Vendor
           </Link>
           <Link
-            to="/dashboard/vendor"
+            to="/VendorDashboard"
             className="inline-block border border-gray-800 text-gray-800 py-3 px-6 rounded-xl text-lg font-medium hover:bg-gray-50 transition"
           >
             Go to Vendor Dashboard
