@@ -7,6 +7,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import EventsPage from './pages/EventsPage';
 import VendorsPage from "./pages/VendorsPage";
+import VendorRegister from "./pages/VendorRegister";
+import EventPlanner from "./pages/EventPlanner";
+import HostDashboard from "./pages/HostDashboard";
+import VendorDashboard from "./pages/VendorDashboard";
 import Contact from "./pages/Contact";
 import Signup from "./pages/Signup"; // New Signup page
 
@@ -33,6 +37,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/vendors" element={<VendorsPage />} />
+            <Route path="/vendorRegister" element={<VendorRegister />} />
+            <Route path="/eventplanner" element={<EventPlanner />} />
+            <Route path="/hostdashboard" element={<HostDashboard />} />
+            <Route path="/vendordashboard" element={<VendorDashboard />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
