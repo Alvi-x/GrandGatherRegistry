@@ -51,6 +51,22 @@ const EventPlanner = () => {
       price: 4200,
       location: "Durban",
       images: ["/img/photo1.jpg", "/img/photo2.jpg"]
+    },
+    {
+      id: 4,
+      name: "Snaps Photography",
+      service: "Photography",
+      price: 5200,
+      location: "Durban",
+      images: ["/img/photo1.jpg", "/img/photo2.jpg", "/img/photo2.jpg"]
+    },
+    {
+      id: 5,
+      name: "Mpho Cam",
+      service: "Photography",
+      price: 2200,
+      location: "Durban",
+      images: ["/img/photo1.jpg", "/img/photo2.jpg", "/img/photo2.jpg", "/img/photo2.jpg"]
     }
   ];
 

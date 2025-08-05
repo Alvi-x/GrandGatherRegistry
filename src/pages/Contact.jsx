@@ -40,7 +40,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Office address</div>
-                    <p className="text-gray-700">2615 Churchill Tower 1, Business Bay, Dubai, U.A.E.</p>
+                    <p className="text-gray-700">2615 Churchill Tower 1, Business Bay, South Africa</p>
                   </div>
                 </li>
 
@@ -51,8 +51,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Contact Number</div>
-                    <p className="text-gray-700">+971 42 866 770</p>
-                    <p className="text-gray-700">+971 50 785 1492</p>
+                    <p className="text-gray-700">+27 42 866 770</p>
+                    <p className="text-gray-700">+27 50 785 1492</p>
                   </div>
                 </li>
 
@@ -63,14 +63,14 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Email Address</div>
-                    <a href="mailto:trupti@homeloungeuae.com" className="text-gray-700">trupti@homeloungeuae.com</a>
+                    <a href="mailto:tumi@grandgather.co.za" className="text-gray-700">tumi@grandgather.co.za</a>
                   </div>
                 </li>
               </ul>            
             {/* Google Map Embed */}
             <div className="w-full h-80 mt-5 bg-gray-300 rounded-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d462163.2427968789!2d55.262166!3d25.181282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69f31384ead9%3A0xd84b8e53143bd3a6!2sHOME%20LOUNGE%20REAL%20ESTATE%20BROKERS%20LLC%20%7C%20PROFESSIONAL%20REAL%20ESTATE%20AGENTS%20%7C%20DUBAI%20REAL%20ESTATE%20AGENT!5e0!3m2!1sen!2sus!4v1734586711659!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d917891.6872366291!2d28.127379399999995!3d-26.01671995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9512955411779f%3A0x6d9ee7c7cb5438e2!2sGauteng!5e0!3m2!1sen!2sza!4v1754293986117!5m2!1sen!2sza"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -127,7 +127,7 @@ const ContactSection = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700"
+                  className="w-full px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700"
                 >
                   Send Message
                 </button>

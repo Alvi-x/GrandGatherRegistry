@@ -3,6 +3,7 @@ import WhyChoose from "../components/WhyChoose";
 import HowItWorks from "../components/HowItWorks";
 import Reviews from "../components/Reviews";
 import Slider from "react-slick"; // Import react-slick
+import EventsPage from './EventsPage'; // Import EventsPage for routing
 
 export default function Home() {
   const settings = {
@@ -19,7 +20,7 @@ export default function Home() {
   return (
     <>
       {/* Main Content */}
-      <div className="relative min-h-screen w-full flex flex-col items-center justify-center bg-brand-white text-brand-black">
+      <div className="bg-stone-300 relative min-h-screen w-full flex flex-col items-center justify-center bg-brand-white text-brand-black">
         
         {/* Carousel with full viewport height */}
         <div className="container-fluid w-full h-screen absolute top-0 left-0 z-10">
@@ -77,13 +78,13 @@ export default function Home() {
 
       {/* Other Content Below Carousel */}
       <div className="relative z-30 text-center"> {/* Ensures content starts below carousel */}        
-          <section className="py-16">
+          <section className="py-2">
             <WhyChoose />
           </section>
-          <section className="py-16 bg-gray-50">
-            <HowItWorks />
+          <section className="py-0">
+            <EventsPage />
           </section>
-          <section className="py-16">
+          <section className="py-2">
             <Reviews />
           </section>
       </div>
