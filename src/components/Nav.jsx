@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { supabase } from "../../supabaseClient"; // <-- import supabase
+import { useUser } from "../UserContext";
 
 export default function Nav({ session }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { profileImage } = useUser(); // Access profileImage from context
 
   const handleSignOut = async () => {
     await supabase.auth.signOut();
@@ -18,7 +20,7 @@ export default function Nav({ session }) {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-6">
+        <ul className="hidden md:flex space-x-6 items-center">
           {["Home", "About", "Events", "Vendors", "Contact"].map(page => (
             <li key={page}>
               <NavLink
@@ -31,14 +33,28 @@ export default function Nav({ session }) {
               </NavLink>
             </li>
           ))}
+
+          {session && (
+            <li>
+              <NavLink to="/profile" className="flex items-center space-x-2 hover:text-brand-gold">
+                <img
+                  src={profileImage}
+                  alt="Profile"
+                  className="w-8 h-8 rounded-full border border-gray-300"
+                />
+                <span className="sr-only">Profile</span>
+              </NavLink>
+            </li>
+          )}
+
           <li>
             {session ? (
-              <NavLink
+              <button
                 onClick={handleSignOut}
                 className="px-6 py-2 rounded-full bg-red-500 text-white font-semibold hover:bg-red-600 transition duration-200"
               >
                 Sign Out
-              </NavLink>
+              </button>
             ) : (
               <NavLink
                 to="/signup"
@@ -49,6 +65,7 @@ export default function Nav({ session }) {
             )}
           </li>
         </ul>
+
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -91,21 +108,19 @@ export default function Nav({ session }) {
               </li>
             ))}
             <li>
-              {session ? (
-                <NavLink
-                  onClick={handleSignOut}
-                  className="block w-full text-center px-6 py-2 rounded-full bg-red-500 text-white font-semibold hover:bg-red-600 transition duration-200"
-                >
-                  Sign Out
-                </NavLink>
-              ) : (
-                <NavLink
-                  to="/signup"
-                  className="block w-full text-center px-6 py-2 rounded-full bg-pink-500 text-white font-semibold hover:bg-pink-600 transition duration-200"
-                >
-                  Sign-up
-                </NavLink>
+              {session && (
+                <li>
+                  <NavLink to="/profile" className="flex items-center space-x-2 hover:text-brand-gold">
+                    <img
+                      src={profileImage}
+                      alt="Profile"
+                      className="w-8 h-8 rounded-full border border-gray-300"
+                    />
+                    <span className="sr-only">Profile</span>
+                  </NavLink>
+                </li>
               )}
+
             </li>
           </ul>
         </div>
